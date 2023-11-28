@@ -19,7 +19,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -vv --cov resources/home/dnanexus/dias_batch/
-        - name: Upload coverage reports to Codecov
+        codecov --file coverage/lcov.info --disable search
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
