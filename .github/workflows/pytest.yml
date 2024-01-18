@@ -20,8 +20,8 @@ jobs:
 
     - name: Test with pytest
       run: |
-        - pytest -vv --cov resources/home/dnanexus/dias_batch/
-        - codecov --file coverage/lcov.info --disable search
+        pytest -vv --cov resources/home/dnanexus/dias_batch/
+        codecov --file coverage/lcov.info --disable search
 
     # after_success:
         # - codecov --file coverage/lcov.info --disable search
