@@ -23,7 +23,10 @@ jobs:
         pytest -vv --cov resources/home/dnanexus/dias_batch/
         codecov --file coverage/lcov.info --disable search
 
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    # after_success:
+        # - codecov --file coverage/lcov.info --disable search
+
+    # - name: Upload coverage reports to Codecov
+    #   uses: codecov/codecov-action@v3
+    #   env:
+    #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
