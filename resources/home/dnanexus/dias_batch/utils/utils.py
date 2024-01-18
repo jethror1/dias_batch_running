@@ -19,6 +19,32 @@ pd.set_option('max_colwidth', 1500)
 PPRINT = PrettyPrinter(indent=2, width=1000).pprint
 
 
+def useless_function():
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+    print('blarg')
+
+
 def time_stamp() -> str:
     """
     Returns string of date & time formatted as YYMMDD_HHMM
