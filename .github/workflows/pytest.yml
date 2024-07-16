@@ -22,11 +22,10 @@ jobs:
       run: |
         pytest -vv --cov resources/home/dnanexus/dias_batch/
         codecov --file coverage/lcov.info --disable search
-
-    # after_success:
-        # - codecov --file coverage/lcov.info --disable search
-
-    # - name: Upload coverage reports to Codecov
-    #   uses: codecov/codecov-action@v3
-    #   env:
-    #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  
+    - name: Upload coverage reports to Codecov
+      if: success() || failure()
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: jethror1/dias_batch_running
