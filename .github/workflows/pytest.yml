@@ -22,9 +22,9 @@ jobs:
       run: |
         pytest -vv --cov resources/home/dnanexus/dias_batch/
         codecov --file coverage/lcov.info --disable search
-
-    # after_success:
+  
     - name: Upload coverage reports to Codecov
+      if: success() || failure()
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
