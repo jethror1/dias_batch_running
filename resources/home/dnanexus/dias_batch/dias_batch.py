@@ -81,6 +81,7 @@ class CheckInputs():
 
     def check_assay(self):
         """Check assay string passed is valid"""
+        exit(1)
         if self.inputs['assay'] not in ['CEN', 'TWE']:
             self.errors.append(
                 f"Invalid assay passed: {self.inputs['assay']}"
